@@ -10,6 +10,7 @@ module.exports = {
                 primary: '#006487',
                 green: '#8CC63F',
                 lightBlue: '#CCE0E7',
+                lightGreen: '#f2f8e1',
                 orange: '#F38E20',
                 purple: '#7C75B4',
                 lightGrey: '#BDBDBD',

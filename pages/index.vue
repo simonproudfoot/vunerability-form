@@ -1,9 +1,6 @@
 <template>
 <main class="bg-background ">
-    <div class="navbar shadow z-50 bg-white py-5 text-center w-full fixed">
-        <h1 class="text-2xl font-bold">Client Vulnerability and Health Update</h1>
-    </div>
-    <div class="container pt-8">
+    <div class="container py-12" style="align-items: start;">
         <transition name="slide-up" mode="out-in">
             <form-section-a v-if="$store.state.currentSection == 1"></form-section-a>
             <form-section-b v-if="$store.state.currentSection == 2 && !$store.state.formData.getConsent || $store.state.currentSection == 2 && $store.state.formData.getConsent == 'No'"></form-section-b>

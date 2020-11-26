@@ -12,6 +12,9 @@ export const state = () => ({
         physicalDetails: '',
         other:'',
         otherDetails: '',
+        will_your_circumstances_affect_your_ability_to_maintain_payments: '',
+        will_your_circumstances_affect_your_ability_to_maintain_payments_Details: ''
+        
     }
 })
 export const mutations = {

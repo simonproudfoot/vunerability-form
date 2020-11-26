@@ -1,5 +1,5 @@
 <template>
-<div class="navbar shadow bg-white py-5 text-center ">
+<div class="navbar shadow bg-white py-5 text-center">
     <h1 class="text-2xl font-bold">
         <template v-if="$store.state.currentSection == 1">
             Client Vulnerability and Health Update

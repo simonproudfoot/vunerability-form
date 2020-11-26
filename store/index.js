@@ -3,6 +3,11 @@ export const state = () => ({
     formData: {
         clientID: '',
         updateType: '',
+        getConsent: null,
+        bereavment: null,
+        bereavmentDetails: '',
+        
+
     }
 })
 export const mutations = {

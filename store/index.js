@@ -6,8 +6,12 @@ export const state = () => ({
         getConsent: null,
         bereavment: null,
         bereavmentDetails: '',
-        
-
+        mentalHealth: '',
+        mentalHealthDetails: '',
+        physical: '',
+        physicalDetails: '',
+        other:'',
+        otherDetails: '',
     }
 })
 export const mutations = {

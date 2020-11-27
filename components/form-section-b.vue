@@ -28,8 +28,8 @@
             <p>"Are you happy for me to put a note on your file and inform your creditors?"</p>
             <br>
             <div v-for="(type, i) in yn" :key="i">
-                <label class="inline-flex block  items-center">
-                    <input type="radio" class="form-radio block text-primary form-radio h-4 w-4" name="radio" :value="type" v-model="getConsent">
+                <label class="inline-flex block items-center">
+                    <input type="radio" class="form-radio block text-primary form-radio h-4 w-4" name="radio" :value="type" v-model="formData.getConsent">
                     <span class="ml-2 block">{{type}}</span>
                 </label>
             </div>
@@ -50,22 +50,30 @@ export default {
         }
     },
     computed: {
-        getConsent: {
+         formData: {
             get() {
-                return this.$store.state.formData.getConsent
+                return this.$store.state.formData
             },
             set(value) {
-                this.$store.commit('setFormData', { field: 'getConsent', value: value })
+                this.$store.commit('setFormData', value)
             }
         },
-        updateType: {
-            get() {
-                return this.$store.state.formData.updateType
-            },
-            set(value) {
-                this.$store.commit('setFormData', { field: 'updateType', value: value })
-            }
-        }
+        // getConsent: {
+        //     get() {
+        //         return this.$store.state.formData.getConsent
+        //     },
+        //     set(value) {
+        //         this.$store.commit('setFormData', { field: 'getConsent', value: value })
+        //     }
+        // },
+        // updateType: {
+        //     get() {
+        //         return this.$store.state.formData.updateType
+        //     },
+        //     set(value) {
+        //         this.$store.commit('setFormData', { field: 'updateType', value: value })
+        //     }
+        // }
     },
 }
 </script>

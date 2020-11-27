@@ -22,6 +22,6 @@ export const mutations = {
         state.currentSection++
     },
     setFormData(state, val) {
-        state.formData[val.field] = val.value
+        state.formData = value
     },
 }

@@ -1,8 +1,13 @@
 <template>
 <div>
-    <div class="navbar shadow z-50 bg-white py-5 text-center w-full">
+    <div class="navbar shadow relative block z-50 bg-white py-5 text-center w-full">
         <h1 class="text-2xl font-bold">Client Vulnerability and Health Update</h1>
     </div>
+    <transition name="slide-down">
+        <div class="bg-orange absolute z-40 w-full py-5 px-5 text-center font-bold text-white block h-auto" v-if="$store.state.currentSection !== 1">
+            WARNING: Do not save changes or recalculate on Debtsolv during or after the use of this system. File must be closed without saving changes.
+        </div>
+    </transition>
     <Nuxt />
 </div>
 </template>
@@ -10,11 +15,6 @@
 <style>
 html {
     font-family:
-        'Source Sans Pro',
-        -apple-system,
-        BlinkMacSystemFont,
-        'Segoe UI',
-        Roboto,
         'Helvetica Neue',
         Arial,
         sans-serif;
@@ -32,34 +32,5 @@ html {
 *::after {
     box-sizing: border-box;
     margin: 0;
-}
-
-.button--green {
-    display: inline-block;
-    border-radius: 4px;
-    border: 1px solid #3b8070;
-    color: #3b8070;
-    text-decoration: none;
-    padding: 10px 30px;
-}
-
-.button--green:hover {
-    color: #fff;
-    background-color: #3b8070;
-}
-
-.button--grey {
-    display: inline-block;
-    border-radius: 4px;
-    border: 1px solid #35495e;
-    color: #35495e;
-    text-decoration: none;
-    padding: 10px 30px;
-    margin-left: 15px;
-}
-
-.button--grey:hover {
-    color: #fff;
-    background-color: #35495e;
 }
 </style>

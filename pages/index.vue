@@ -1,6 +1,6 @@
 <template>
-<main class="bg-background ">
-    <div class="container py-12">
+<main class="bg-background" :class="$store.state.currentSection !== 1 ? 'pt-20' : null ">
+    <div class="container px-4 py-12">
         <transition name="slide-up" mode="out-in">
             <form-section-a v-if="$store.state.currentSection == 1"></form-section-a>
             <form-section-b v-if="$store.state.currentSection == 2 && !$store.state.formData.getConsent || $store.state.currentSection == 2 && $store.state.formData.getConsent == 'No'"></form-section-b>
@@ -13,11 +13,6 @@
 </main>
 </template>
 <style>
-/* Sample `apply` at-rules with Tailwind CSS
-.container {
-@apply min-h-screen flex justify-center items-center text-center mx-auto;
-}
-*/
 .container {
     margin: 0 auto;
     min-height: 100vh;
@@ -26,6 +21,42 @@
     align-items: start;
     text-align: center;
 }
+input,
+textarea {
+    @apply border;
+    @apply mt-1;
+    @apply block;
+    @apply w-full;
+    @apply py-2;
+    @apply px-3;
+    @apply border-gray-900 !important
+}
+@media (max-width: 640px) {
+    .card__inner {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+}
+@media (min-width: 640px) {
+    .card__inner {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+}
+
+@media (max-width: 640px) {
+    .caption {
+        padding-left: 80px;
+      
+    }
+}
+@media (min-width: 640px) {
+    .caption {
+        padding-left: 100px;
+      
+    }
+}
+
 
 .inactive {
     @apply bg-lightGrey;
@@ -42,7 +73,7 @@
 .numberBlock {
     width: 35px;
     height: auto;
-    left: -50px;
+    left: -43px;
     top: 0;
 }
 .slide-up-enter-active {
@@ -55,5 +86,16 @@
 .slide-up-leave-to {
     opacity: 0;
     transform: translateY(10px);
+}
+.slide-down-enter-active {
+    transition: all .3s ease;
+}
+.slide-down-leave-active {
+    transition: all .3s ease;
+}
+.slide-down-enter,
+.slide-down-leave-to {
+    opacity: 0;
+    transform: translateY(-100px);
 }
 </style>

@@ -25,8 +25,11 @@ export const state = () => ({
         followUpDate: '',
         is_a_creditor_contact_diary_required: '',
         does_sst_need_to_be_notified: '',
-        are_you_happy_to_proceed_with_the_information_noted: '' 
-        
+        are_you_happy_to_proceed_with_the_information_noted: '', 
+        consent_note_records: '',
+        consent_inform_creditors: '',
+        consent_no_permission: ''
+
     }
 })
 export const mutations = {

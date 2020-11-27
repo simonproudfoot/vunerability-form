@@ -1,11 +1,8 @@
 <template>
 <div class="card bg-white w-full max-w-7xl mx-auto shadow rounded text-left">
-    <div class="bg-lightBlue py-3 ">
-        <div class="max-w-4xl mx-auto"></div>
-    </div>
     <div class="card__inner max-w-4xl mx-auto px-8 py-16">
         <label for="clientID" class="block text-primary font-bold pb-3">CLIENT ID</label>
-        <input v-model="formData.clientID" type="text" placeholder="-- Please enter client ID --" class="block border-b-2 py-2 px-3 text-black">
+        <input v-model="formData.clientID" type="text" placeholder="-- Please enter client ID --">
         <br>
         <label for="clientID" class="block text-primary pb-3 font-bold">UPDATE TYPE</label>
         <div v-for="(type, i) in typeList" :key="i">
@@ -20,7 +17,6 @@
     </div>
 </div>
 </template>
-
 <script>
 export default {
     data: function () {
@@ -28,6 +24,5 @@ export default {
             typeList: ['Client Vulnerability or Health Notification', 'Client Potential Vulnerability', 'Client Vulnerability Ended', 'Unverified CVN']
         }
     },
-    
 }
 </script>

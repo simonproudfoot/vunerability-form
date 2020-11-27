@@ -52,7 +52,7 @@
         </div>
     </div>
     <template v-if="formData.bereavment && formData.mentalHealth && formData.physical && formData.other">
-        <div class="bg-lightGreen py-6">
+        <div class="bg-lightGreen caption py-6">
             <div class="max-w-4xl mx-auto relative px-8">
                 <span class="numberBlock absolute -mt-10">
                     <img src="~static/comment.svg" />
@@ -95,10 +95,10 @@
             </div>
             <div v-if="formData.do_you_require_us_to_speak_to_any_third_party == 'Yes'" class="pl-6 max-w-md mb-5">
                 <label class="block font-bold">Name of third party</label>
-                <input v-model="formData.third_party_name" type="test" class="form-input mt-1 block w-full" placeholder="Please enter name of 3rd party">
+                <input v-model="formData.third_party_name" type="text" class="" placeholder="Please enter name of 3rd party">
                 <br>
                 <label class="block font-bold">Relationship to client</label>
-                <input v-model="formData.third_party_relationship" type="test" class="form-input mt-1 block w-full" placeholder="Please enter relationship to client">
+                <input v-model="formData.third_party_relationship" type="text" class="" placeholder="Please enter relationship to client">
                 <br>
                 <label class="block font-bold">Date of birth</label>
                 <client-only>
@@ -147,7 +147,7 @@
                 </div>
             </div>
         </div>
-        <div class="bg-lightGreen py-6">
+        <div class="bg-lightGreen caption py-6">
             <div class="max-w-4xl mx-auto relative px-8">
                 <span class="numberBlock absolute -mt-10">
                     <img src="~static/comment.svg" />

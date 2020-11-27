@@ -28,33 +28,6 @@ export default {
             typeList: ['Client Vulnerability or Health Notification', 'Client Potential Vulnerability', 'Client Vulnerability Ended', 'Unverified CVN']
         }
     },
-    computed: {
-
-        formData: {
-            get() {
-                return this.$store.state.formData
-            },
-            set(value) {
-                this.$store.commit('setFormData', value)
-            }
-        },
-
-        // clientID: {
-        //     get() {
-        //         return this.$store.state.formData.clientID
-        //     },
-        //     set(value) {
-        //         this.$store.commit('setFormData', { field: 'clientID', value: value })
-        //     }
-        // },
-        // updateType: {
-        //     get() {
-        //         return this.$store.state.formData.updateType
-        //     },
-        //     set(value) {
-        //         this.$store.commit('setFormData', { field: 'updateType', value: value })
-        //     }
-        // }
-    }
+    
 }
 </script>

@@ -20,12 +20,21 @@ export const state = () => ({
         third_party_name: '',
         third_party_relationship: '',
         third_party_dob: '',
+        can_the_client_understand_remember_weigh_up_and_make_an_informed_decision: '',
+        is_a_follow_up_diary_required: '',
+        followUpDate: '',
+        is_a_creditor_contact_diary_required: '',
+        does_sst_need_to_be_notified: '',
+        are_you_happy_to_proceed_with_the_information_noted: '' 
         
     }
 })
 export const mutations = {
     currentSectionPlus(state) {
         state.currentSection++
+    },
+    currentSectionMinus(state) {
+        state.currentSection--
     },
     setFormData(state, val) {
         state.formData = value

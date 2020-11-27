@@ -52,33 +52,56 @@
         </div>
     </div>
     <template v-if="formData.bereavment && formData.mentalHealth && formData.physical && formData.other">
-    <div class="bg-lightGreen py-6">
-        <div class="max-w-4xl mx-auto relative px-8">
-            <span class="numberBlock absolute -mt-10">
-                <img src="~static/comment.svg" />
-            </span>
-            "Now, I'm going to ask you a short series of questions that will help me understand your circumstances better."
-        </div>
-    </div>
-    
-    <div class="card__inner max-w-4xl mx-auto px-8 py-16">
-        <div class="block mb-6 relative">
-            <label class="block font-bold">"Will your circumstances affect your ability to maintain payments?"</label>
-            <p class="pb-3">If so, how long for? Request medical evidence for MH CVN's in the form of letter from Dr, hospital, therapist or recognized medical establishment as creditors will need this to update their records.</p>
-            <div v-for="(a, i) in ynn" :key="i">
-                <label class="inline-flex block items-center">
-                    <input type="radio" class="form-radio block text-primary form-radio h-4 w-4" name="radio5" :value="a" v-model="formData.will_your_circumstances_affect_your_ability_to_maintain_payments">
-                    <span class="ml-2 block">{{a}}</span>
-                </label>
+        <div class="bg-lightGreen py-6">
+            <div class="max-w-4xl mx-auto relative px-8">
+                <span class="numberBlock absolute -mt-10">
+                    <img src="~static/comment.svg" />
+                </span>
+                "Now, I'm going to ask you a short series of questions that will help me understand your circumstances better."
             </div>
-            <textarea v-if="formData.bereavment == 'Yes'" v-model="formData.will_your_circumstances_affect_your_ability_to_maintain_payments_Details" class="form-textarea mt-1 block w-full" rows="3" placeholder="Further details"></textarea>
         </div>
-    </div>
+        <div class="card__inner max-w-4xl mx-auto px-8 py-16">
+            <div class="block mb-6 relative">
+                <label class="block font-bold">"Will your circumstances affect your ability to maintain payments?"</label>
+                <p class="pb-3">If so, how long for? Request medical evidence for MH CVN's in the form of letter from Dr, hospital, therapist or recognized medical establishment as creditors will need this to update their records.</p>
+                <div v-for="(a, i) in ynn" :key="i">
+                    <label class="inline-flex block items-center">
+                        <input type="radio" class="form-radio block text-primary form-radio h-4 w-4" name="radio5" :value="a" v-model="formData.will_your_circumstances_affect_your_ability_to_maintain_payments">
+                        <span class="ml-2 block">{{a}}</span>
+                    </label>
+                </div>
+                <textarea v-if="formData.will_your_circumstances_affect_your_ability_to_maintain_payments == 'Yes'" v-model="formData.will_your_circumstances_affect_your_ability_to_maintain_payments_Details" class="form-textarea mt-1 block w-full" rows="3" placeholder="Further details"></textarea>
+            </div>
+            <div class="block my-6 relative">
+                <label class="block font-bold">"Do your circumstances mean we should not contact you at a particular day or part of a day?"</label>
+                <p class="pb-3">I.e. morning / afternoon / evening. Also, is telephone, email or letter best?</p>
+                <div v-for="(c, i) in ynn" :key="i">
+                    <label class="inline-flex block items-center">
+                        <input type="radio" class="form-radio block text-primary form-radio h-4 w-4" name="radio6" :value="c" v-model="formData.do_your_circumstances_mean_we_should_not_contact_you_at_a_particular_day_or_part_of_a_day">
+                        <span class="ml-2 block">{{c}}</span>
+                    </label>
+                </div>
+                <textarea v-if="formData.do_your_circumstances_mean_we_should_not_contact_you_at_a_particular_day_or_part_of_a_day == 'Yes'" v-model="formData.do_your_circumstances_mean_we_should_not_contact_you_at_a_particular_day_or_part_of_a_day_details" class="form-textarea mt-1 block w-full" rows="3" placeholder="Further details"></textarea>
+            </div>
+            <div class="block my-6 relative">
+                <label class="block font-bold">"Do you require us to speak to any third party?"</label>
+                <p class="pb-3">If applicable care worker / partner / friend?</p>
+                <div v-for="(c, i) in ynn" :key="i">
+                    <label class="inline-flex block items-center">
+                        <input type="radio" class="form-radio block text-primary form-radio h-4 w-4" name="radio7" :value="c" v-model="formData.do_your_circumstances_mean_we_should_not_contact_you_at_a_particular_day_or_part_of_a_day">
+                        <span class="ml-2 block">{{c}}</span>
+                    </label>
+                </div>
 
+             
+
+                
+
+            </div>
+        </div>
     </template>
 </div>
 </template>
-
 <script>
 export default {
     data: function () {
@@ -88,7 +111,7 @@ export default {
         }
     },
     computed: {
-         formData: {
+        formData: {
             get() {
                 return this.$store.state.formData
             },

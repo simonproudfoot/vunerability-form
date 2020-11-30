@@ -17,6 +17,7 @@
     </div>
 </div>
 </template>
+
 <script>
 export default {
     data: function () {
@@ -24,5 +25,8 @@ export default {
             typeList: ['Client Vulnerability or Health Notification', 'Client Potential Vulnerability', 'Client Vulnerability Ended', 'Unverified CVN']
         }
     },
+    mounted() {
+        this.toTop()
+    }
 }
 </script>

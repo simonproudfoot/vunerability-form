@@ -7,11 +7,19 @@
             <form-section-b-a v-if="$store.state.currentSection == 2 && $store.state.formData.getConsent === 'Yes'" />
         </transition>
     </div>
-    <pre>
+    <pre style="overflow: hidden">
     {{$store.state.formData}}
     </pre>
 </main>
 </template>
+<script>
+import smoothscroll from 'smoothscroll-polyfill';
+export default {
+    mounted() {
+        smoothscroll.polyfill();
+    },
+}
+</script>
 <style>
 .container {
     margin: 0 auto;
@@ -43,21 +51,16 @@ textarea {
         padding-right: 100px;
     }
 }
-
 @media (max-width: 640px) {
     .caption {
         padding-left: 80px;
-      
     }
 }
 @media (min-width: 640px) {
     .caption {
         padding-left: 100px;
-      
     }
 }
-
-
 .inactive {
     @apply bg-lightGrey;
     pointer-events: none;

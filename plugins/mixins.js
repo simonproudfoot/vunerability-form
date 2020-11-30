@@ -3,6 +3,17 @@ export default {
     name: "mixins"
 };
 Vue.mixin({
+    methods: {
+        toTop() {
+            setTimeout(() => {
+                window.scroll({
+                    top: 0,
+                    left: 0,
+                    behavior: 'smooth'
+                })
+            }, 100);
+        }
+    },
     computed: {
         formData: {
             get() {

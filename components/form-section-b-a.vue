@@ -111,11 +111,11 @@
             <br>
             <label class="block font-bold">Date of birth</label>
             <client-only>
-                <div>
+             
                     <date-picker v-model="formData.third_party_dob" placeholder="Please select date of birth" format="dd/MM/yyyy">
                     
                     </date-picker>
-                </div>
+              
                 <!-- <date-picker v-model="formData.third_party_dob" placeholder="Please select date of birth" format="dd/MM/yyyy" /> -->
 
             </client-only>

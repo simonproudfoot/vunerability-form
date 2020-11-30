@@ -92,6 +92,7 @@ textarea {
     width: 40px;
     z-index: 10;
     display: block;
+    pointer-events: none;
 }
 .numberBlock {
     width: 35px;

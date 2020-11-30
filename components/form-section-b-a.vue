@@ -59,6 +59,17 @@
         </div>
     </div>
     <div class="card__inner max-w-4xl mx-auto px-8 py-16">
+
+          <div class=" py-10">
+            <span class="max-w-4xl relative">
+                <span class="noteBlock absolute text-purple font-bold ">
+                    Note
+                </span>
+                <p class="font-bold">If applicable select YES:</p>
+            </span>
+            </div>
+
+
         <div class="block mb-10 relative">
             <label class="block font-bold">"Will your circumstances affect your ability to maintain payments?"</label>
             <p class="pb-3">If so, how long for? Request medical evidence for MH CVN's in the form of letter from Dr, hospital, therapist or recognized medical establishment as creditors will need this to update their records.</p>

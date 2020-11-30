@@ -48,7 +48,13 @@
             </div>
         </div>
         <div class="card__inner max-w-4xl mx-auto px-8 py-16">
-            <p class="font-bold">Deal with clients queries appropriately and if the client still does not want you to record this, then do not continue with the vulnerable system and return to the original call.</p>
+
+            <span class="max-w-4xl relative">
+                <span class="noteBlock absolute text-purple font-bold ">
+                    Note
+                </span>
+                <p class="font-bold">Deal with clients queries appropriately and if the client still does not want you to record this, then do not continue with the vulnerable system and return to the original call.</p>
+            </span>
             <br>
             <br>
             <label class="font-bold">WOULD YOU LIKE ME TO:</label>
@@ -72,8 +78,15 @@
                 <input type="checkbox" class="form-checkbox h-6 w-6 text-primary" v-model="formData.consent_no_permission" @click="formData.consent_note_records = false, formData.consent_inform_creditors = false">
                 <span class="ml-3 text-lg">No permission to record details</span>
             </label>
-            <p class="font-bold py-10">Where the severity of the customer's situation means we have a duty to record the information, then speak to a manager for further guidance.</p>
-            {{valid}}
+            <div class=" py-10">
+            <span class="max-w-4xl relative">
+                <span class="noteBlock absolute text-purple font-bold ">
+                    Note
+                </span>
+                <p class="font-bold">Where the severity of the customer's situation means we have a duty to record the information, then speak to a manager for further guidance.</p>
+            </span>
+            </div>
+
             <nav class="pt-5 grid grid-cols-2">
                 <button class="bg-primary outline-primary px-3 py-2 text-white rounded hover:bg-green mr-auto" @click="goBack">PREVIOUS</button>
                 <button class="bg-primary outline-primary px-3 py-2 text-white rounded hover:bg-green ml-auto" :class="!validate ? 'inactive': null" @click="$store.commit('currentSectionPlus', null)">NEXT ></button>
@@ -95,7 +108,7 @@ export default {
     },
     methods: {
         goBack() {
-    
+
             this.formData.getConsent = null
         }
     },

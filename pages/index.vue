@@ -5,6 +5,7 @@
                 <form-section-a v-if="$store.state.currentSection == 1"></form-section-a>
                 <form-section-b v-if="$store.state.currentSection == 2 && !$store.state.formData.getConsent || $store.state.currentSection == 2 && $store.state.formData.getConsent == 'No'"></form-section-b>
                 <form-section-b-a v-if="$store.state.currentSection == 2 && $store.state.formData.getConsent === 'Yes'" />
+                <form-section-c v-if="$store.state.currentSection == 3" />
             </transition>
         </div>
         <pre style="overflow: hidden; display: none">

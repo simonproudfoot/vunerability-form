@@ -16,6 +16,7 @@
 html {
     font-family: Arial,sans-serif;
     font-size: 1rem;
+    
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     -moz-osx-font-smoothing: grayscale;

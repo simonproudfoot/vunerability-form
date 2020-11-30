@@ -13,7 +13,6 @@
     </pre>
 </main>
 </template>
-
 <script>
 import smoothscroll from 'smoothscroll-polyfill';
 export default {
@@ -22,7 +21,6 @@ export default {
     },
 }
 </script>
-
 <style>
 .container {
     margin: 0 auto;
@@ -32,7 +30,6 @@ export default {
     align-items: start;
     text-align: center;
 }
-
 input,
 textarea {
     @apply border;
@@ -43,46 +40,38 @@ textarea {
     @apply px-3;
     @apply border-gray-900 !important
 }
-
 @media (max-width: 640px) {
     .card__inner {
         padding-left: 80px;
         padding-right: 80px;
     }
 }
-
 @media (min-width: 640px) {
     .card__inner {
         padding-left: 100px;
         padding-right: 100px;
     }
 }
-
 @media (max-width: 640px) {
     .caption {
         padding-left: 80px;
     }
 }
-
 @media (min-width: 640px) {
     .caption {
         padding-left: 100px;
     }
 }
-
 .inactive {
     @apply bg-lightGrey;
     pointer-events: none;
 }
-
 .vdp-datepicker {
     @apply relative;
 }
-
 .vdp-datepicker svg {
     @apply absolute;
 }
-
 .vdp-datepicker input {
     @apply max-w-md;
     @apply border;
@@ -92,7 +81,6 @@ textarea {
     @apply rounded;
     position: relative;
 }
-
 .vdp-datepicker::before {
     content: '';
     position: absolute;
@@ -104,60 +92,49 @@ textarea {
     width: 40px;
     z-index: 10;
     display: block;
-
 }
-
 .numberBlock {
     width: 35px;
     height: auto;
     left: -43px;
     top: 0;
 }
-
 @media (min-width: 640px) {
     .noteBlock {
         width: 35px;
         height: auto;
         left: -43px;
-        top: 14px;
+        top: 0;
+        left: -43px;
     }
-
 }
-
 @media (min-width: 1024px) {
     .noteBlock {
-      left: -87px;
+        left: -93px;
     }
 }
-
 @media (max-width: 640px) {
     .noteBlock {
         position: relative;
     }
 }
-
 .slide-up-enter-active {
     transition: all .3s ease;
 }
-
 .slide-up-leave-active {
     transition: all .3s ease;
 }
-
 .slide-up-enter,
 .slide-up-leave-to {
     opacity: 0;
     transform: translateY(10px);
 }
-
 .slide-down-enter-active {
     transition: all .3s ease;
 }
-
 .slide-down-leave-active {
     transition: all .3s ease;
 }
-
 .slide-down-enter,
 .slide-down-leave-to {
     opacity: 0;

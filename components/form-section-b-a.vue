@@ -61,7 +61,7 @@
     <div class="card__inner max-w-4xl mx-auto px-8 py-16">
 
           <div class=" py-10">
-            <span class="max-w-4xl relative">
+            <span class="max-w-4xl block relative">
                 <span class="noteBlock absolute text-purple font-bold ">
                     Note
                 </span>

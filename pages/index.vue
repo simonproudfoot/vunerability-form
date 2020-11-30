@@ -1,16 +1,16 @@
 <template>
-<main class="bg-background" :class="$store.state.currentSection !== 1 ? 'pt-20' : null ">
-    <div class="container px-4 py-12">
-        <transition name="slide-up" mode="out-in">
-            <form-section-a v-if="$store.state.currentSection == 1"></form-section-a>
-            <form-section-b v-if="$store.state.currentSection == 2 && !$store.state.formData.getConsent || $store.state.currentSection == 2 && $store.state.formData.getConsent == 'No'"></form-section-b>
-            <form-section-b-a v-if="$store.state.currentSection == 2 && $store.state.formData.getConsent === 'Yes'" />
-        </transition>
-    </div>
-    <pre style="overflow: hidden">
-    {{$store.state.formData}}
-    </pre>
-</main>
+    <main class="bg-background" :class="$store.state.currentSection !== 1 ? 'pt-20' : null ">
+        <div class="container px-4 py-12">
+            <transition name="slide-up" mode="out-in">
+                <form-section-a v-if="$store.state.currentSection == 1"></form-section-a>
+                <form-section-b v-if="$store.state.currentSection == 2 && !$store.state.formData.getConsent || $store.state.currentSection == 2 && $store.state.formData.getConsent == 'No'"></form-section-b>
+                <form-section-b-a v-if="$store.state.currentSection == 2 && $store.state.formData.getConsent === 'Yes'" />
+            </transition>
+        </div>
+        <pre style="overflow: hidden; display: none">
+        {{$store.state.formData}}
+        </pre>
+    </main>
 </template>
 <script>
 import smoothscroll from 'smoothscroll-polyfill';
@@ -65,13 +65,34 @@ textarea {
     @apply bg-lightGrey;
     pointer-events: none;
 }
+
+.vdp-datepicker {
+    @apply relative;
+}
+.vdp-datepicker svg{
+    @apply absolute;
+}
 .vdp-datepicker input {
     @apply max-w-md;
     @apply border;
-    @apply px-3;
+    @apply pl-12;
     @apply py-2;
     @apply w-full;
     @apply rounded;
+    position: relative;
+}
+.vdp-datepicker::before{
+    content: '';
+    position: absolute;
+    background-image: url('~@/static/calendar.svg');
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 40px;
+    z-index: 10;
+    display: block;
+    
 }
 .numberBlock {
     width: 35px;

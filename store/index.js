@@ -1,3 +1,4 @@
+export const strict = false
 export const state = () => ({
     currentSection: 1,
     formData: {
